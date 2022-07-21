@@ -272,7 +272,7 @@ def myspgend(m,p):
 #             print("a Male, mood of speech: Showing no emotion, normal, p-value/sample size= :%.2f" % (mmm), (nnn))
 	    gender = "male"
 	    mood = "showing no emotion, normal"
-	    return gender, mood, (mmm,nnn)
+	    return gender, mood
         elif z4>114 and z4<=135:
 #             print("a Male, mood of speech: Reading, p-value/sample size= :%.2f" % (mmm), (nnn))
 	    gender = "male"
