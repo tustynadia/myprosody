@@ -269,35 +269,35 @@ def myspgend(m,p):
         else:
             mmm=0.35
         if z4>97 and z4<=114:
-#             print("a Male, mood of speech: Showing no emotion, normal, p-value/sample size= :%.2f" % (mmm), (nnn))
-	    gender = "male"
-	    mood = "showing no emotion, normal"
-	    return gender, mood
+            print("a Male, mood of speech: Showing no emotion, normal, p-value/sample size= :%.2f" % (mmm), (nnn))
+# 	    gender = "male"
+# 	    mood = "showing no emotion, normal"
+# 	    return gender, mood
         elif z4>114 and z4<=135:
-#             print("a Male, mood of speech: Reading, p-value/sample size= :%.2f" % (mmm), (nnn))
-	    gender = "male"
-	    mood = "reading"
-	    return gender, mood
+            print("a Male, mood of speech: Reading, p-value/sample size= :%.2f" % (mmm), (nnn))
+# 	    gender = "male"
+# 	    mood = "reading"
+# 	    return gender, mood
         elif z4>135 and z4<=163:
-#             print("a Male, mood of speech: speaking passionately, p-value/sample size= :%.2f" % (mmm), (nnn))
-            gender = "male"
-	    mood = "speaking passionately"
-	    return gender, mood
+            print("a Male, mood of speech: speaking passionately, p-value/sample size= :%.2f" % (mmm), (nnn))
+#           gender = "male"
+# 	    mood = "speaking passionately"
+# 	    return gender, mood
         elif z4>163 and z4<=197:
-#             print("a female, mood of speech: Showing no emotion, normal, p-value/sample size= :%.2f" % (mmm), (nnn))
-	    gender = "female"
-	    mood = "showing no emotion, normal"
-	    return gender, mood
+            print("a female, mood of speech: Showing no emotion, normal, p-value/sample size= :%.2f" % (mmm), (nnn))
+# 	    gender = "female"
+# 	    mood = "showing no emotion, normal"
+# 	    return gender, mood
         elif z4>197 and z4<=226:
-#             print("a female, mood of speech: Reading, p-value/sample size= :%.2f" % (mmm), (nnn))
-	    gender = "female"
-	    mood = "reading"
-	    return gender, mood
+            print("a female, mood of speech: Reading, p-value/sample size= :%.2f" % (mmm), (nnn))
+# 	    gender = "female"
+# 	    mood = "reading"
+# 	    return gender, mood
         elif z4>226 and z4<=245:
-#             print("a female, mood of speech: speaking passionately, p-value/sample size= :%.2f" % (mmm), (nnn))
-            gender = "female"
-	    mood = "speaking pasionately"
-	    return gender, mood
+            print("a female, mood of speech: speaking passionately, p-value/sample size= :%.2f" % (mmm), (nnn))
+#           gender = "female"
+# 	    mood = "speaking pasionately"
+# 	    return gender, mood
         else:
             print("Voice not recognized")
     except:
