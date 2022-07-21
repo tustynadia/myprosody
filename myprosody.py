@@ -42,7 +42,7 @@ def myspsyl(m,p):
     z2 = run_praat_file(m, p)
     z3=int(z2[0]) # will be the integer number 10
     z4=float(z2[3]) # will be the floating point number 8.3
-    print ("number_ of_syllables=",z3)
+#     print ("number_ of_syllables=",z3)
     return z3
 
 def mysppaus(m,p):
