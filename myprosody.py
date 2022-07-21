@@ -42,7 +42,7 @@ def myspsyl(m,p):
     z2 = run_praat_file(m, p)
     z3=int(z2[0]) # will be the integer number 10
     z4=float(z2[3]) # will be the floating point number 8.3
-#     print ("number_ of_syllables=",z3)
+    print ("number_ of_syllables=",z3)
     return z3
 
 def mysppaus(m,p):
@@ -52,7 +52,7 @@ def mysppaus(m,p):
     z2 = run_praat_file(m, p)
     z3=int(z2[1]) # will be the integer number 10
     z4=float(z2[3]) # will be the floating point number 8.3
-#     print ("number_of_pauses=",z3)
+    print ("number_of_pauses=",z3)
     return z3
 
 def myspsr(m,p):
@@ -62,7 +62,7 @@ def myspsr(m,p):
     z2 = run_praat_file(m, p)
     z3=int(z2[2]) # will be the integer number 10
     z4=float(z2[3]) # will be the floating point number 8.3
-#     print ("rate_of_speech=",z3,"# syllables/sec original duration")
+    print ("rate_of_speech=",z3,"# syllables/sec original duration")
     return z3
 
 def myspatc(m,p):
@@ -72,7 +72,7 @@ def myspatc(m,p):
     z2 = run_praat_file(m, p)
     z3=int(z2[3]) # will be the integer number 10
     z4=float(z2[3]) # will be the floating point number 8.3
-#     print ("articulation_rate=",z3,"# syllables/sec speaking duration")
+    print ("articulation_rate=",z3,"# syllables/sec speaking duration")
     return z3
 
 def myspst(m,p):
@@ -82,7 +82,7 @@ def myspst(m,p):
     z2 = run_praat_file(m, p)
     z3=int(z2[3]) # will be the integer number 10
     z4=float(z2[4]) # will be the floating point number 8.3
-#     print ("speaking_duration=",z4,"# sec only speaking duration without pauses")
+    print ("speaking_duration=",z4,"# sec only speaking duration without pauses")
     return z4
 
 def myspod(m,p):
@@ -92,7 +92,7 @@ def myspod(m,p):
     z2 = run_praat_file(m, p)
     z3=int(z2[3]) # will be the integer number 10
     z4=float(z2[5]) # will be the floating point number 8.3
-#     print ("original_duration=",z4,"# sec total speaking duration with pauses")
+    print ("original_duration=",z4,"# sec total speaking duration with pauses")
     return z4
 
 def myspbala(m,p):
@@ -102,7 +102,7 @@ def myspbala(m,p):
     z2 = run_praat_file(m, p)
     z3=int(z2[3]) # will be the integer number 10
     z4=float(z2[6]) # will be the floating point number 8.3
-#     print ("balance=",z4,"# ratio (speaking duration)/(original duration)")
+    print ("balance=",z4,"# ratio (speaking duration)/(original duration)")
     return z4
 
 def myspf0mean(m,p):
@@ -112,7 +112,7 @@ def myspf0mean(m,p):
     z2 = run_praat_file(m, p)
     z3=int(z2[3]) # will be the integer number 10
     z4=float(z2[7]) # will be the floating point number 8.3
-#     print ("f0_mean=",z4,"# Hz global mean of fundamental frequency distribution")
+    print ("f0_mean=",z4,"# Hz global mean of fundamental frequency distribution")
     return z4
 
 def myspf0sd(m,p):
@@ -122,7 +122,7 @@ def myspf0sd(m,p):
     z2 = run_praat_file(m, p)
     z3=int(z2[3]) # will be the integer number 10
     z4=float(z2[8]) # will be the floating point number 8.3
-#     print ("f0_SD=",z4,"# Hz global standard deviation of fundamental frequency distribution")
+    print ("f0_SD=",z4,"# Hz global standard deviation of fundamental frequency distribution")
     return z4
 
 def myspf0med(m,p):
@@ -132,7 +132,7 @@ def myspf0med(m,p):
     z2 = run_praat_file(m, p)
     z3=int(z2[3]) # will be the integer number 10
     z4=float(z2[9]) # will be the floating point number 8.3
-#     print ("f0_MD=",z4,"# Hz global median of fundamental frequency distribution")
+    print ("f0_MD=",z4,"# Hz global median of fundamental frequency distribution")
     return z4
 
 def myspf0min(m,p):
@@ -142,7 +142,7 @@ def myspf0min(m,p):
     z2 = run_praat_file(m, p)
     z3=int(z2[10]) # will be the integer number 10
     z4=float(z2[10]) # will be the floating point number 8.3
-#     print ("f0_min=",z3,"# Hz global minimum of fundamental frequency distribution")
+    print ("f0_min=",z3,"# Hz global minimum of fundamental frequency distribution")
     return z3
 
 def myspf0max(m,p):
@@ -152,7 +152,7 @@ def myspf0max(m,p):
     z2 = run_praat_file(m, p)
     z3=int(z2[11]) # will be the integer number 10
     z4=float(z2[11]) # will be the floating point number 8.3
-#     print ("f0_max=",z3,"# Hz global maximum of fundamental frequency distribution")
+    print ("f0_max=",z3,"# Hz global maximum of fundamental frequency distribution")
     return z3
 
 def myspf0q25(m,p):
@@ -162,7 +162,7 @@ def myspf0q25(m,p):
     z2 = run_praat_file(m, p)
     z3=int(z2[12]) # will be the integer number 10
     z4=float(z2[11]) # will be the floating point number 8.3
-#     print ("f0_quan25=",z3,"# Hz global 25th quantile of fundamental frequency distribution")
+    print ("f0_quan25=",z3,"# Hz global 25th quantile of fundamental frequency distribution")
     return z3
 
 def myspf0q75(m,p):
@@ -172,7 +172,7 @@ def myspf0q75(m,p):
     z2 = run_praat_file(m, p)
     z3=int(z2[13]) # will be the integer number 10
     z4=float(z2[11]) # will be the floating point number 8.3
-#     print ("f0_quan75=",z3,"# Hz global 75th quantile of fundamental frequency distribution")
+    print ("f0_quan75=",z3,"# Hz global 75th quantile of fundamental frequency distribution")
     return z3
 
 def mysptotal(m,p):
@@ -186,7 +186,7 @@ def mysptotal(m,p):
     dataset=pd.DataFrame({"number_ of_syllables":z5[0,:],"number_of_pauses":z5[1,:],"rate_of_speech":z5[2,:],"articulation_rate":z5[3,:],"speaking_duration":z5[4,:],
                         "original_duration":z5[5,:],"balance":z5[6,:],"f0_mean":z5[7,:],"f0_std":z5[8,:],"f0_median":z5[9,:],"f0_min":z5[10,:],"f0_max":z5[11,:],
                         "f0_quantile25":z5[12,:],"f0_quan75":z5[13,:]})
-#     print (dataset.T)
+    print (dataset.T)
     return dataset.T
 
 def mysppron(m,p):
