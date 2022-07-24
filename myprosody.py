@@ -17,7 +17,7 @@ def run_praat_file(m, p, s):
 
     returns : objects outputed by the praat script
     """
-    sound=p+"/"+"dataset"+"/"+"audioFiles"+"training/"+s+"/"+m+".wav"
+    sound=p+"/"+"dataset"+"/"+"audioFiles"+"/"+"training/"+s+"/"+m+".wav"
     sourcerun=p+"/"+"dataset"+"/"+"essen"+"/"+"myspsolution.praat"
     path=p+"/"+"dataset"+"/"+"audioFiles"+"/"+"training/"+s+"/"
 
