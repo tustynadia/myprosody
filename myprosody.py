@@ -9,17 +9,17 @@ from scipy.stats import ks_2samp
 from scipy.stats import ttest_ind
 import os
 
-def run_praat_file(m, p, s):
+def run_praat_file(m, p):
     """
     p : path to dataset folder
     m : path to file
-    s : path to each subject
+    
 
     returns : objects outputed by the praat script
     """
-    sound=p+"/"+"dataset"+"/"+"audioFiles"+"/"+"testing/"+"subject"+s+"/"+m+".wav"
+    sound=p+"/"+"dataset"+"/"+"audioFiles"+"/"+m+".wav"
     sourcerun=p+"/"+"dataset"+"/"+"essen"+"/"+"myspsolution.praat"
-    path=p+"/"+"dataset"+"/"+"audioFiles"+"/"+"testing/"+"subject"+s+"/"
+    path=p+"/"+"dataset"+"/"+"audioFiles"+"/"
 
     assert os.path.isfile(sound), "Wrong path to audio file"
     assert os.path.isfile(sourcerun), "Wrong path to praat script"
@@ -36,151 +36,151 @@ def run_praat_file(m, p, s):
         print ("Try again the sound of the audio was not clear")
 
 
-def myspsyl(m,p,s):
+def myspsyl(m,p):
     """
     Detect and count number of syllables
     """
-    z2 = run_praat_file(m, p, s)
+    z2 = run_praat_file(m, p)
     z3=int(z2[0]) # will be the integer number 10
     z4=float(z2[3]) # will be the floating point number 8.3
 #     print ("number_ of_syllables=",z3)
     return z3
 
-def mysppaus(m,p,s):
+def mysppaus(m,p):
     """
     Detect and count number of fillers and pauses
     """
-    z2 = run_praat_file(m, p, s)
+    z2 = run_praat_file(m, p)
     z3=int(z2[1]) # will be the integer number 10
     z4=float(z2[3]) # will be the floating point number 8.3
 #     print ("number_of_pauses=",z3)
     return z3
 
-def myspsr(m,p,s):
+def myspsr(m,p):
     """
     Measure the rate of speech (speed)
     """
-    z2 = run_praat_file(m, p, s)
+    z2 = run_praat_file(m, p)
     z3=int(z2[2]) # will be the integer number 10
     z4=float(z2[3]) # will be the floating point number 8.3
 #     print ("rate_of_speech=",z3,"# syllables/sec original duration")
     return z3
 
-def myspatc(m,p,s):
+def myspatc(m,p):
     """
     Measure the articulation (speed)
     """
-    z2 = run_praat_file(m, p, s)
+    z2 = run_praat_file(m, p)
     z3=int(z2[3]) # will be the integer number 10
     z4=float(z2[3]) # will be the floating point number 8.3
 #     print ("articulation_rate=",z3,"# syllables/sec speaking duration")
     return z3
 
-def myspst(m,p,s):
+def myspst(m,p):
     """
     Measure speaking time (excl. fillers and pause)
     """
-    z2 = run_praat_file(m, p, s)
+    z2 = run_praat_file(m, p)
     z3=int(z2[3]) # will be the integer number 10
     z4=float(z2[4]) # will be the floating point number 8.3
 #     print ("speaking_duration=",z4,"# sec only speaking duration without pauses")
     return z4
 
-def myspod(m,p,s):
+def myspod(m,p):
     """
     Measure total speaking duration (inc. fillers and pauses)
     """
-    z2 = run_praat_file(m, p, s)
+    z2 = run_praat_file(m, p)
     z3=int(z2[3]) # will be the integer number 10
     z4=float(z2[5]) # will be the floating point number 8.3
 #     print ("original_duration=",z4,"# sec total speaking duration with pauses")
     return z4
 
-def myspbala(m,p,s):
+def myspbala(m,p):
     """
     Measure ratio between speaking duration and total speaking duration
     """
-    z2 = run_praat_file(m, p, s)
+    z2 = run_praat_file(m, p)
     z3=int(z2[3]) # will be the integer number 10
     z4=float(z2[6]) # will be the floating point number 8.3
 #     print ("balance=",z4,"# ratio (speaking duration)/(original duration)")
     return z4
 
-def myspf0mean(m,p,s):
+def myspf0mean(m,p):
     """
     Measure fundamental frequency distribution mean
     """
-    z2 = run_praat_file(m, p, s)
+    z2 = run_praat_file(m, p)
     z3=int(z2[3]) # will be the integer number 10
     z4=float(z2[7]) # will be the floating point number 8.3
 #     print ("f0_mean=",z4,"# Hz global mean of fundamental frequency distribution")
     return z4
 
-def myspf0sd(m,p,s):
+def myspf0sd(m,p):
     """
     Measure fundamental frequency distribution SD
     """
-    z2 = run_praat_file(m, p, s)
+    z2 = run_praat_file(m, p)
     z3=int(z2[3]) # will be the integer number 10
     z4=float(z2[8]) # will be the floating point number 8.3
 #     print ("f0_SD=",z4,"# Hz global standard deviation of fundamental frequency distribution")
     return z4
 
-def myspf0med(m,p,s):
+def myspf0med(m,p):
     """
     Measure fundamental frequency distribution median
     """
-    z2 = run_praat_file(m, p, s)
+    z2 = run_praat_file(m, p)
     z3=int(z2[3]) # will be the integer number 10
     z4=float(z2[9]) # will be the floating point number 8.3
 #     print ("f0_MD=",z4,"# Hz global median of fundamental frequency distribution")
     return z4
 
-def myspf0min(m,p,s):
+def myspf0min(m,p):
     """
     Measure fundamental frequency distribution minimum
     """
-    z2 = run_praat_file(m, p, s)
+    z2 = run_praat_file(m, p)
     z3=int(z2[10]) # will be the integer number 10
     z4=float(z2[10]) # will be the floating point number 8.3
 #     print ("f0_min=",z3,"# Hz global minimum of fundamental frequency distribution")
     return z3
 
-def myspf0max(m,p,s):
+def myspf0max(m,p):
     """
     Measure fundamental frequency distribution maximum
     """
-    z2 = run_praat_file(m, p, s)
+    z2 = run_praat_file(m, p)
     z3=int(z2[11]) # will be the integer number 10
     z4=float(z2[11]) # will be the floating point number 8.3
 #     print ("f0_max=",z3,"# Hz global maximum of fundamental frequency distribution")
     return z3
 
-def myspf0q25(m,p,s):
+def myspf0q25(m,p):
     """
     Measure 25th quantile fundamental frequency distribution
     """
-    z2 = run_praat_file(m, p, s)
+    z2 = run_praat_file(m, p)
     z3=int(z2[12]) # will be the integer number 10
     z4=float(z2[11]) # will be the floating point number 8.3
 #     print ("f0_quan25=",z3,"# Hz global 25th quantile of fundamental frequency distribution")
     return z3
 
-def myspf0q75(m,p,s):
+def myspf0q75(m,p):
     """
     Measure 75th quantile fundamental frequency distribution
     """
-    z2 = run_praat_file(m, p, s)
+    z2 = run_praat_file(m, p)
     z3=int(z2[13]) # will be the integer number 10
     z4=float(z2[11]) # will be the floating point number 8.3
 #     print ("f0_quan75=",z3,"# Hz global 75th quantile of fundamental frequency distribution")
     return z3
 
-def mysptotal(m,p,s):
+def mysptotal(m,p):
     """
     Overview
     """
-    z2 = run_praat_file(m, p, s)
+    z2 = run_praat_file(m, p)
     z3=np.array(z2)
     z4=np.array(z3)[np.newaxis]
     z5=z4.T
